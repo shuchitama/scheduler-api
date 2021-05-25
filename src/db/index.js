@@ -4,6 +4,7 @@ const client = new pg.Client({
 	connectionString: process.env.DATABASE_URL || "",
 	ssl: true,
 	dialectOptions: { ssl: { require: true } },
+  sslmode="require"
 });
 
 client
